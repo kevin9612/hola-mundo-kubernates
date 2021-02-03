@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hola-mundo-4
+  labels:
+    app: hola-mundo-4
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hola-mundo-4
+  template:
+    metadata:
+      labels:
+        app: hola-mundo-4
+    spec:
+      containers:
+        - name: hola-mundo-4
+          image: fwtbt960119/hola-mundo-kubernates-2
+          ports:
+            - containerPort: 80
